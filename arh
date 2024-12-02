@@ -1,0 +1,14 @@
+resume_generator/
+├── backend/              # Backend на FastAPI
+│   ├── main.py           # Основной файл приложения
+│   ├── templates/        # HTML-шаблоны
+│   │   ├── template1.html
+│   │   └── template2.html
+│   └── static/           # CSS/шрифты для PDF
+├── frontend/             # Frontend на Next.js
+│   ├── pages/            # Страницы
+│   │   ├── index.js      # Главная страница
+│   │   ├── api/          # API-роуты (если нужно)
+│   ├── components/       # Компоненты
+│   └── styles/           # Стили
+└── README.md             # Описание проекта
