@@ -1,14 +1,17 @@
 resume_generator/
-├── backend/              # Backend на FastAPI
-│   ├── main.py           # Основной файл приложения
-│   ├── templates/        # HTML-шаблоны
-│   │   ├── template1.html
-│   │   └── template2.html
-│   └── static/           # CSS/шрифты для PDF
+├── backend/
+├── app/
+│   ├── __init__.py         # Empty or contains basic setup
+│   ├── main.py             # FastAPI entry point
+│   ├── models.py           # Data models
+│   ├── services.py         # Business logic
+│   ├── routes.py           # API routes
+├── output/                 # Generated PDFs
+├── requirements.txt        # Dependencies
 ├── frontend/             # Frontend на Next.js
 │   ├── pages/            # Страницы
 │   │   ├── index.js      # Главная страница
-│   │   ├── api/          # API-роуты (если нужно)
+│   │   ├── api/          # API-роуты
 │   ├── components/       # Компоненты
 │   └── styles/           # Стили
 └── README.md             # Описание проекта
