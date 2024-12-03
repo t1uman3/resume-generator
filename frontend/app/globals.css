@@ -1,21 +1,107 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Основной стиль страницы */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #121212; /* Тёмный фон */
+  color: #e0e0e0; /* Светлый текст */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Контейнер приложения */
+.container {
+  width: 100%;
+  max-width: 600px;
+  background: #1e1e1e; /* Тёмно-серый фон карточки */
+  border-radius: 12px; /* Более закруглённые углы */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Мягкая тень */
+  padding: 25px;
+  animation: fadeIn 0.5s ease; /* Анимация появления */
+}
+
+/* Заголовок */
+.title {
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #bb86fc; /* Лавандовый акцент */
+}
+
+/* Стили для формы */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Равномерное расстояние между элементами */
+}
+
+/* Подпись полей формы */
+.label {
+  font-weight: bold;
+  color: #e0e0e0;
+  font-size: 14px;
+}
+
+/* Поля ввода */
+.input,
+.textarea {
+  width: 100%;
+  padding: none;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #2a2a2a; /* Поля в тон контейнера */
+  color: #e0e0e0;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3); /* Внутренняя тень */
+}
+
+/* При фокусе */
+.input:focus,
+.textarea:focus {
+  outline: none;
+  background-color: #333; /* Немного светлее при активации */
+  border: 1px solid #bb86fc; /* Акцентный цвет */
+}
+
+/* Текстовая область */
+.textarea {
+  min-height: 100px;
+  resize: none; /* Убираем изменение размера */
+}
+
+/* Кнопка */
+.button {
+  background-color: #bb86fc;
+  color: #1e1e1e; /* Контрастный текст */
+  border: none;
+  border-radius: 6px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Действия при наведении */
+.button:hover {
+  background-color: #9b67e5;
+}
+
+.button:disabled {
+  background-color: #666;
+  color: #bbb;
+  cursor: not-allowed;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
